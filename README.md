@@ -5,8 +5,8 @@
         - `List posts`
         - `Delete posts`
     
-    - The project don't have UI and UX, 
-      because the unique focus in this project is a lerning principle basic of the backend project
+    - The project don't have UI and UX because the unique focus in this project
+    is a lerning principle basic of the backend project
 
 # Tecnologies
 
