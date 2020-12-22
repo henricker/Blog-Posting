@@ -1,9 +1,96 @@
-<h1>List of posts: </h1>
+<div class="main">
+<h2>List of posts: </h2>
 
 {{#each posts}}
-    <h2>Id: {{id}} </h2>
-    <p>Title: {{title}}</p>
-    <p>Password: {{content}}</p>
-    <a href="/remove/{{id}}"><button type="submit">Remove</button></a>
-    <hr>
+    <div class="post">
+        <h3>{{title}}</h3>
+        <p>{{content}}</p>
+        <div class="controller">
+            <a href="/remove/{{id}}"><button type="submit" class="clear">Remove</button></a>
+            <a href="/update/{{id}}"><button type="submit" class="update">Update</button></a>
+            <a href="/create"><button type="submit" class="create">New post</button></a>
+        </div>
+    </div>
 {{/each}}
+</div>
+
+<style>
+    .main {
+        width: 600px;
+        margin: 5px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main h2 {
+        color: #fff;
+        font-size: 26px;
+        background-color:  rgb(187, 141, 42);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .post {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .post h3 {
+        color: rgb(77, 73, 73);
+        font-size: 20px;
+    }
+
+    .post p {
+        color: #444;
+        font-size: 14px;
+    }
+
+    .post button {
+        width: 100px;
+        transition: background-color .2s;
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .post button.create {
+        background-color:rgb(108, 240, 108);
+    }
+    .post button.create:hover {
+        background-color: rgb(20, 235, 20);
+    }
+
+    .post button.update {
+        background-color: rgb(109, 248, 248);
+    }
+
+    .post button.update:hover {
+        background-color: rgb(14, 206, 206);
+    }
+
+    .post button.clear:hover {
+        background-color:rgb(179, 182, 179);
+    }
+
+    hr {
+        background-color: #444;
+        border: 0 none;
+        color: #444;
+        height: 1px;
+    }
+
+    .controller {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>

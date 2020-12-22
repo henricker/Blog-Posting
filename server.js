@@ -21,8 +21,13 @@ const Post = require('./models/Post');
     server.use(bodyParser.json());
 
 //routes
-server.get('/cad', (request, response) => {
+server.get('/create', (request, response) => {
     response.render('form');
+})
+
+server.get('/update/:id', (request, response) => {
+    response.render('update', {id: request.params.id});
+    console.log('id: ' + request.params.id);
 })
 
 server.get('/', (request, response) => {
@@ -44,15 +49,38 @@ server.get('/', (request, response) => {
 });
 
 server.post('/add', (request, response) => {
-    Post.create({
+    if(!(request.body.title == "" && request.body.content == "")) {
+        Post.create({
         title: request.body.title,
         content: request.body.content,
-    }).then(() => {
+        }).then(() => {
+            response.redirect('/');
+        }).catch((err) => {
+            response.send(`Error! ${err.message}`);
+        })
+    }else
         response.redirect('/');
-    }).catch((err) => {
-        response.send(`Error! ${err.message}`);
-    })
-})
+});
+
+server.post('/up/:id', (request, response) => {
+
+    if(!(request.body.title == "" && request.body.content == "")) {
+        const updateValues = {
+            title: request.body.title,
+            content: request.body.content
+        }
+
+        console.log(request.body.id);
+        Post.update(updateValues, {where: {id: request.params.id}})
+        .then(() => {
+            response.redirect('/');
+        }).catch((err) => {
+            response.send('Error: ' + err.message);
+        });
+    }
+    else
+        response.redirect('/');
+});
 
 server.get('/remove/:id', (request, response) => {
     Post.destroy({where: {id: request.params.id}})
@@ -61,9 +89,9 @@ server.get('/remove/:id', (request, response) => {
     }).catch((err) => {
         response.send('Ocorreu um erro: ' + err);
     })
-})
+});
 
 //Running server in 8080 port localhost.
 server.listen('8080', () => {
     console.log("Server running!");
-})
+});
