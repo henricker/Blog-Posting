@@ -26,9 +26,6 @@
 # What are the next steps?
 
     - Learn about API rest and create projects more professionals.
-
     - Learn MongoDB database
-
     - Struct MVC (Model view controller)
-
     - New tecniques of the express framework
