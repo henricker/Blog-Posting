@@ -1,0 +1,9 @@
+<h1>List of posts: </h1>
+
+{{#each posts}}
+    <h2>Id: {{id}} </h2>
+    <p>Title: {{title}}</p>
+    <p>Password: {{content}}</p>
+    <a href="/remove/{{id}}"><button type="submit">Remove</button></a>
+    <hr>
+{{/each}}
