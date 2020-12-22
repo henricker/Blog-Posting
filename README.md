@@ -5,7 +5,8 @@
         - `List posts`
         - `Delete posts`
     
-    - The project don't have UI and UX, because the unique focus in this project is a lerning principle basic of the backend project
+    - The project don't have UI and UX, 
+      because the unique focus in this project is a lerning principle basic of the backend project
 
 # Tecnologies
 
@@ -29,3 +30,9 @@
     - Learn MongoDB database
     - Struct MVC (Model view controller)
     - New tecniques of the express framework
+
+# Do you want to test my project?
+
+    - git clone: https://github.com/henricker/Blog-Posting
+    - yarn add -> To install all dependencies.
+    - yarn start-dev -> To running my project.
