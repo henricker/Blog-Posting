@@ -33,7 +33,7 @@
     - New tecniques of the express framework
 
 # Do you want to test my project?
-
+    - Before, install MYSQL (If you don't have)
     - git clone: https://github.com/henricker/Blog-Posting
     - yarn add -> To install all dependencies.
     - yarn start-dev -> To running my project.
