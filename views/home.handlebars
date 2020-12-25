@@ -1,6 +1,7 @@
 <div class="main">
 <h2>List of posts: </h2>
 
+{{#if posts}}
 {{#each posts}}
     <div class="post">
         <h3>{{title}}</h3>
@@ -12,6 +13,13 @@
         </div>
     </div>
 {{/each}}
+{{else}}
+   <div class="post">
+        <div class="controller">
+            <a href="/create"><button type="submit" class="create">New post</button></a>
+        </div>
+    </div>
+{{/if}}
 </div>
 
 <style>
