@@ -42,3 +42,8 @@
     - yarn dev -> To running my project.
 
 
+
+## Presentation 
+![plot](presentation/presentation.png)
+
+![plot](presentation/presentation2.png)
