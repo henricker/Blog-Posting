@@ -24,8 +24,6 @@ const route = require('./routes');
     //config routes
     server.use(route);
 
-//routes
-
 
 //Running server in 8080 port localhost.
 server.listen('8080', () => {
