@@ -8,6 +8,8 @@
     
     - The project don't have UI and UX because the unique focus in this project
       is a lerning principle basic of the web backend project
+    
+    - (UPDATE!) i was puted the project in structure (MVC).
 
 # Tecnologies
 
@@ -24,6 +26,7 @@
     - Connect with database with Sequelize
     - Requests http (methods: Get, Post...)
     - Integration with handlebars to connect variables with HTML
+    - Basic of Model, View, Controller (MVC)
 
 # What are the next steps?
 
@@ -36,4 +39,6 @@
     - Before, install MYSQL (If you don't have)
     - git clone: https://github.com/henricker/Blog-Posting
     - yarn add -> To install all dependencies.
-    - yarn start-dev -> To running my project.
+    - yarn dev -> To running my project.
+
+
