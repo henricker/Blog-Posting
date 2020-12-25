@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start-dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
