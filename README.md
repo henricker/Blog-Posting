@@ -31,7 +31,7 @@
 # What are the next steps?
 
     - Learn about API rest and create projects more professionals.
-    - Learn MongoDB database
+    - Learn NoSql (MongoDB) database
     - Struct MVC (Model view controller)
     - New tecniques of the express framework
 
@@ -46,4 +46,8 @@
 ## Presentation 
 ![plot](presentation/presentation.png)
 
+![plot](presentation/writePost.png)
+
 ![plot](presentation/presentation2.png)
+
+![plot](presentation/updatePost.png)
